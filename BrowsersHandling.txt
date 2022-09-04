@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Browser Detection Example</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var userAgent	= navigator.userAgent;
+var opera	= (userAgent.indexOf('Opera') != -1);
+var ie		= (userAgent.indexOf('MSIE') != -1);
+var gecko	= (userAgent.indexOf('Gecko') != -1);
+var netscape	= (userAgent.indexOf('Mozilla') != -1);
+var version	= navigator.appVersion;
+
+if (opera) {
+document.write("Opera-based browser");
+}
+
+else if (gecko) {
+document.write("Mozilla-based browser");
+}
+
+else if (ie) {
+document.write("IE-based browser");
+}
+
+else if (netscape) {
+document.write("Netscape-based browser");
+}
+
+else {
+document.write("Unknown browser");
+}
+
+document.write("<br/> Browser version info: " + version);
+
+</script>
+</body>
+</html>
